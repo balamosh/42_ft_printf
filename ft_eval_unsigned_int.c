@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_eval_unsigned_int.c                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/12 22:46:34 by sotherys          #+#    #+#             */
+/*   Updated: 2021/10/12 22:46:35 by sotherys         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-void	ft_eval_unsigned_int(t_print *tab)
+void	ft_eval_unsigned_int(t_printf *tab)
 {
 	unsigned int	nb;
 

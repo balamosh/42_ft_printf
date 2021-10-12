@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/12 22:46:43 by sotherys          #+#    #+#             */
+/*   Updated: 2021/10/12 22:47:25 by sotherys         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
@@ -8,7 +20,7 @@
 typedef struct s_printf
 {
 	va_list		args;
-	
+
 	int			wdt;
 	int			prc;
 	int			zero;
@@ -19,7 +31,7 @@ typedef struct s_printf
 	int			sp;
 	int			hash;
 	int			plus;
-	
+
 	char		base[17];
 	char		prefix[3];
 	char		null[7];

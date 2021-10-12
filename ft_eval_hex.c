@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_eval_hex.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/12 22:46:22 by sotherys          #+#    #+#             */
+/*   Updated: 2021/10/12 22:46:23 by sotherys         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 #include "libft.h"
 
-void	ft_eval_hex_low(t_print *tab)
+void	ft_eval_hex_low(t_printf *tab)
 {
 	unsigned int	nb;
 
@@ -13,7 +25,7 @@ void	ft_eval_hex_low(t_print *tab)
 	ft_print_hex(tab, nb, "0123456789abcdef");
 }
 
-void	ft_eval_hex_cap(t_print *tab)
+void	ft_eval_hex_cap(t_printf *tab)
 {
 	unsigned int	nb;
 
@@ -25,7 +37,7 @@ void	ft_eval_hex_cap(t_print *tab)
 	ft_print_hex(tab, nb, "0123456789ABCDEF");
 }
 
-void	ft_print_hex(t_print *tab, unsigned long int nb, const char *base)
+void	ft_print_hex(t_printf *tab, unsigned long int nb, const char *base)
 {
 	int	len;
 

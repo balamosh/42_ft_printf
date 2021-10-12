@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_eval_format.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/12 22:46:17 by sotherys          #+#    #+#             */
+/*   Updated: 2021/10/12 22:46:20 by sotherys         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 #include "libft.h"
 
-static int	ft_eval_flag(t_print *tab, const char *format, int pos)
+static int	ft_eval_flag(t_printf *tab, const char *format, int pos)
 {
 	int	f_id;
 
@@ -15,7 +27,7 @@ static int	ft_eval_flag(t_print *tab, const char *format, int pos)
 	return (pos);
 }
 
-int	ft_eval_format(t_print *tab, const char *format, int pos)
+int	ft_eval_format(t_printf *tab, const char *format, int pos)
 {
 	int	c_id;
 
