@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tab_utils.c                                        :+:      :+:    :+:   */
+/*   ft_tab_utils.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 22:46:47 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/12 22:47:31 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/13 04:05:11 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_reset_tab(t_print *tab)
+void	ft_reset_tab(t_printf *tab)
 {
 	tab->wdt = 0;
 	tab->prc = 0;
@@ -26,7 +26,7 @@ void	ft_reset_tab(t_print *tab)
 	tab->prefix[0] = '\0';
 }
 
-void	ft_init_tab(t_print *tab)
+void	ft_init_tab(t_printf *tab)
 {
 	ft_reset_tab(tab);
 	tab->tl = 0;

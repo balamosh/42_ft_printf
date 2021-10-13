@@ -6,7 +6,7 @@
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 22:46:30 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/12 22:46:31 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/13 03:38:42 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_print_str(t_printf *tab, const char *str)
 	int	len;
 
 	if (!str)
-		str = ft_set_null(tab);
+		str = ft_set_null(tab, "(null)");
 	len = ft_strlen(str);
 	if (tab->pnt)
 	{
