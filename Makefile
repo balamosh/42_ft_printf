@@ -8,9 +8,9 @@ LIBFT_LIB	= libft.a
 
 HEADERS		= -I includes/ -I libft/
 
-SRCS_FILES	= $(shell find $(SRCS_PATH) -name "*c")
+SRCS		= $(shell find $(SRCS_PATH) -name "*c")
 
-SRCS		= $(addprefix $(SRCS_PATH), $(SRCS_FILES))
+#SRCS		= $(addprefix $(SRCS_PATH), $(SRCS_FILES))
 
 OBJS		= $(SRCS:.c=.o)
 

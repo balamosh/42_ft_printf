@@ -6,11 +6,12 @@
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 22:46:34 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/12 22:46:35 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/13 04:21:10 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "libft.h"
 
 void	ft_eval_unsigned_int(t_printf *tab)
 {

@@ -1,7 +1,7 @@
 #include "ft_printf.h"
 #include "libft.h"
 
-static int	ft_print_prefix(const char *prefix)
+int	ft_print_prefix(const char *prefix)
 {
 	int	i;
 

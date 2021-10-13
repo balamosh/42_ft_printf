@@ -6,7 +6,7 @@
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 22:46:43 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/13 04:05:37 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/13 04:24:33 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,11 @@ typedef struct s_printf
 }		t_printf;
 
 /*
-**	ft_printf function
+**	ft_printf main functions
 */
 
-int	ft_printf(const char *format, ...);
+int		ft_printf(const char *format, ...);
+int		ft_eval_format(t_printf *tab, const char *format, int pos);
 
 /*
 **	Conversion evaluation functions
@@ -69,8 +70,11 @@ void	ft_eval_percent(t_printf *tab);
 **	Conversion evaluation utility functions
 */
 
+int		ft_print_prefix(const char *prefix);
 void	ft_print_empty(t_printf *tab);
 char	*ft_set_null(t_printf *tab, const char *str);
+void	ft_print_nbr_left(t_printf *tab);
+void	ft_print_nbr_right(t_printf *tab);
 
 /*
 **	Flag evaluation functions

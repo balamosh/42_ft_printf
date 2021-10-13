@@ -6,7 +6,7 @@
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 22:46:47 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/13 04:05:11 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/13 04:21:48 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,8 @@ static void	fill_functions_hash(int *hash, const char *str)
 
 void	t_printf_constructor(t_printf *tab)
 {
-	fill_functions_hash(cnv_hash, "cspdiuxX%");
-	fill_functions_hash(flg_hash, "-0.*# +");
+	fill_functions_hash(tab->cnv_hash, "cspdiuxX%");
+	fill_functions_hash(tab->flg_hash, "-0.*# +");
 	tab->cnv_eval[0] = &ft_eval_char;
 	tab->cnv_eval[1] = &ft_eval_str;
 	tab->cnv_eval[2] = &ft_eval_pointer;

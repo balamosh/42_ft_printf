@@ -6,11 +6,12 @@
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 00:21:26 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/13 00:21:28 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/13 04:23:07 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "libft.h"
 
 void	ft_eval_pointer(t_printf *tab)
 {
