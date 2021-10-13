@@ -6,7 +6,7 @@
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 22:46:30 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/13 03:38:42 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/13 18:08:53 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	ft_print_str(t_printf *tab, const char *str)
 		tab->prc = 0;
 	}
 	tab->hash = 0;
+	tab->sp = 0;
 	ft_update_tab(tab, len);
 	if (!tab->dash)
 		while (tab->wdt-- > 0)
