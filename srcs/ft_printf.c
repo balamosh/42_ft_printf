@@ -21,6 +21,7 @@ int	ft_printf(const char *format, ...)
 
 	if (!tab_constructed)
 		t_printf_constructor(&tab);
+	ft_init_tab(&tab);
 	va_start(tab.args, format);
 	i = 0;
 	ret = 0;

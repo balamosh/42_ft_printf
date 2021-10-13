@@ -6,7 +6,7 @@
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 00:21:26 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/13 04:23:07 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/13 04:43:08 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,8 @@ void	ft_eval_pointer(t_printf *tab)
 
 void	ft_print_pointer(t_printf *tab, unsigned long int nb)
 {
-	if (nb != 0)
-		tab->hash = 1;
-	if (tab->hash)
-		ft_strcpy(tab->prefix, "0x");
+	tab->hash = 1;
+	ft_strcpy(tab->prefix, "0x");
 	ft_print_hex(tab, nb, "0123456789abcdef");
 }
 
@@ -44,8 +42,8 @@ void	ft_print_pointer(t_printf *tab, unsigned long int nb)
 	}
 	else
 	{
-		if (tab->hash)
-			ft_strcpy(tab->prefix, "0x");
+		tab->hash = 1;
+		ft_strcpy(tab->prefix, "0x");
 		ft_print_hex(tab, nb, "0123456789abcdef");
 	}
 }
