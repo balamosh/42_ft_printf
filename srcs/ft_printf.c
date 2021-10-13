@@ -6,7 +6,7 @@
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 22:46:40 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/13 19:09:37 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/13 19:21:12 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == '%')
 			i = ft_eval_format(&tab, format, i + 1);
 		else
-			tab->tl += write(1, &format[i], 1);
+			tab.tl += write(1, &format[i], 1);
 		i++;
 	}
 	va_end(tab.args);
-	return (tab->tl);
+	return (tab.tl);
 }
