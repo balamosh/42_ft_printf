@@ -6,7 +6,7 @@
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 18:09:13 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/13 18:09:14 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/13 19:54:51 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_print_empty(t_printf *tab)
 {
 	ft_update_prefix(tab);
 	tab->tl += ft_print_prefix(tab->prefix);
-	if (tab->wdt-- > 0)
+	while (tab->wdt-- > 0)
 		tab->tl += write(1, " ", 1);
 }
 

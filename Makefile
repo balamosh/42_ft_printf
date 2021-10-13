@@ -18,7 +18,7 @@ LIBFT		= $(addprefix $(LIBFT_PATH), $(LIBFT_LIB))
 
 CC			= gcc
 
-CFLAGS		= -Wall -Werror -Wextra
+CFLAGS		= -Wall -Werror -Wextra -g
 
 LIBFT_OBJS	= $(LIBFT_PATH)*.o
 
