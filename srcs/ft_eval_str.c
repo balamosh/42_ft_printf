@@ -6,12 +6,26 @@
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 22:46:30 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/13 18:08:53 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/14 16:13:20 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
+
+#ifdef __APPLE__
+
+void	ft_eval_str(t_printf *tab)
+{
+	char	*str;
+
+	if (tab->plus && tab->sp)
+		++tab->wdt;
+	str = va_arg(tab->args, char *);
+	ft_print_str(tab, str);
+}
+
+#else
 
 void	ft_eval_str(t_printf *tab)
 {
@@ -20,6 +34,8 @@ void	ft_eval_str(t_printf *tab)
 	str = va_arg(tab->args, char *);
 	ft_print_str(tab, str);
 }
+
+#endif
 
 void	ft_print_str(t_printf *tab, const char *str)
 {

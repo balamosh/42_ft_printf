@@ -6,7 +6,7 @@
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 22:46:47 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/13 04:21:48 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/14 16:20:38 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,20 +51,20 @@ void	t_printf_constructor(t_printf *tab)
 {
 	fill_functions_hash(tab->cnv_hash, "cspdiuxX%");
 	fill_functions_hash(tab->flg_hash, "-0.*# +");
-	tab->cnv_eval[0] = &ft_eval_char;
-	tab->cnv_eval[1] = &ft_eval_str;
-	tab->cnv_eval[2] = &ft_eval_pointer;
-	tab->cnv_eval[3] = &ft_eval_int;
-	tab->cnv_eval[4] = &ft_eval_int;
-	tab->cnv_eval[5] = &ft_eval_unsigned_int;
-	tab->cnv_eval[6] = &ft_eval_hex_low;
-	tab->cnv_eval[7] = &ft_eval_hex_cap;
-	tab->cnv_eval[8] = &ft_eval_percent;
-	tab->flg_eval[0] = &ft_flag_dash;
-	tab->flg_eval[1] = &ft_flag_zero;
-	tab->flg_eval[2] = &ft_flag_point;
-	tab->flg_eval[3] = &ft_flag_star;
-	tab->flg_eval[4] = &ft_flag_hash;
-	tab->flg_eval[5] = &ft_flag_space;
-	tab->flg_eval[6] = &ft_flag_plus;
+	tab->cnv_eval[tab->cnv_hash[(int) 'c']] = &ft_eval_char;
+	tab->cnv_eval[tab->cnv_hash[(int) 's']] = &ft_eval_str;
+	tab->cnv_eval[tab->cnv_hash[(int) 'p']] = &ft_eval_pointer;
+	tab->cnv_eval[tab->cnv_hash[(int) 'd']] = &ft_eval_int;
+	tab->cnv_eval[tab->cnv_hash[(int) 'i']] = &ft_eval_int;
+	tab->cnv_eval[tab->cnv_hash[(int) 'u']] = &ft_eval_unsigned_int;
+	tab->cnv_eval[tab->cnv_hash[(int) 'x']] = &ft_eval_hex_low;
+	tab->cnv_eval[tab->cnv_hash[(int) 'X']] = &ft_eval_hex_cap;
+	tab->cnv_eval[tab->cnv_hash[(int) '%']] = &ft_eval_percent;
+	tab->flg_eval[tab->flg_hash[(int) '-']] = &ft_flag_dash;
+	tab->flg_eval[tab->flg_hash[(int) '0']] = &ft_flag_zero;
+	tab->flg_eval[tab->flg_hash[(int) '.']] = &ft_flag_point;
+	tab->flg_eval[tab->flg_hash[(int) '*']] = &ft_flag_star;
+	tab->flg_eval[tab->flg_hash[(int) '#']] = &ft_flag_hash;
+	tab->flg_eval[tab->flg_hash[(int) ' ']] = &ft_flag_space;
+	tab->flg_eval[tab->flg_hash[(int) '+']] = &ft_flag_plus;
 }

@@ -6,7 +6,7 @@
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 22:46:26 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/13 04:23:20 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/14 16:24:42 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,15 @@ void	ft_eval_int(t_printf *tab)
 
 	nb = va_arg(tab->args, int);
 	if (nb == 0 && tab->prc == 0 && tab->pnt == 1)
-		ft_print_empty(tab);
+	{
+		if (tab->plus)
+		{
+			++tab->wdt;
+			ft_print_char(tab, '+');
+		}
+		else
+			ft_print_empty(tab);
+	}
 	else
 		ft_print_int(tab, nb);
 }

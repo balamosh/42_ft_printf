@@ -6,7 +6,7 @@
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 18:09:13 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/13 19:54:51 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/14 15:13:55 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void	ft_print_empty(t_printf *tab)
 
 char	*ft_set_null(t_printf *tab, const char *str)
 {
+	(void) tab;
 	return ((char *) str);
 }
 
