@@ -6,7 +6,7 @@
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 22:46:43 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/14 22:46:56 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/14 23:04:33 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ typedef struct s_printf
 	int			flg_hash[256];
 	void		(*cnv_eval[9])(struct s_printf *);
 	int			(*flg_eval[7])(struct s_printf *, const char *, int);
-}		t_printf;
+}				t_printf;
 
 /*
 **	ft_printf main functions
