@@ -23,6 +23,12 @@ SRCS_FILES	= ft_printf.c				\
 			  ft_eval_percent.c			\
 			  ft_eval_flags_1.c			\
 			  ft_eval_flags_2.c			\
+			  ft_atoi.c					\
+			  ft_isdigit.c				\
+			  ft_min.c					\
+			  ft_numlen.c				\
+			  ft_putchar_fd.c			\
+			  ft_strlen.c
 
 OBJS_FILES	= $(SRCS_FILES:.c=.o)
 
@@ -42,8 +48,8 @@ all: $(NAME)
 
 bonus: $(NAME)
 
-$(NAME): $(OBJS_PATH) $(OBJS) $(LIBFT)
-	ar -rcs $(NAME) $(OBJS) $(LIBFT_OBJS)
+$(NAME): $(OBJS_PATH) $(OBJS)
+	ar -rcs $(NAME) $(OBJS)
 	ranlib $(NAME)
 
 $(OBJS_PATH)%.o: $(SRCS_PATH)%.c

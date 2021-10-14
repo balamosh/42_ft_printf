@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_eval_flags_2.c                                  :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/13 18:09:27 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/14 22:45:14 by sotherys         ###   ########.fr       */
+/*   Created: 2021/10/14 22:13:31 by sotherys          #+#    #+#             */
+/*   Updated: 2021/10/14 22:13:32 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_flag_hash(t_printf *tab, const char *format, int pos)
+void	ft_putchar_fd(char c, int fd)
 {
-	(void) format;
-	tab->hash = 1;
-	return (++pos);
-}
-
-int	ft_flag_space(t_printf *tab, const char *format, int pos)
-{
-	(void) format;
-	tab->sp = 1;
-	return (++pos);
-}
-
-int	ft_flag_plus(t_printf *tab, const char *format, int pos)
-{
-	(void) format;
-	tab->plus = 1;
-	return (++pos);
+	write(fd, &c, 1);
 }

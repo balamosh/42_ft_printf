@@ -6,12 +6,11 @@
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 22:46:26 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/14 16:24:42 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/14 22:47:14 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
 
 void	ft_eval_int(t_printf *tab)
 {
@@ -34,24 +33,22 @@ void	ft_eval_int(t_printf *tab)
 
 void	ft_print_int(t_printf *tab, int nb)
 {
-	int		i;
-	int		len;
-	char	*nbr;
+	int			len;
+	long int	nbr;
 
-	if (nb < 0)
+	nbr = nb;
+	if (nbr < 0)
+	{
 		tab->sign = 1;
+		nbr = -nbr;
+	}
 	if (tab->pnt)
 		tab->zero = 0;
-	nbr = ft_itoa(nb);
-	if (!nbr)
-		return ;
-	len = ft_strlen(nbr) - tab->sign;
+	len = ft_numlen(nbr, 10);
 	tab->hash = 0;
 	ft_update_tab(tab, len);
 	ft_print_nbr_left(tab);
-	i = tab->sign;
-	while (nbr[i])
-		tab->tl += write(1, &nbr[i++], 1);
-	free(nbr);
+	ft_putnbr_un(nbr);
+	tab->tl += len;
 	ft_print_nbr_right(tab);
 }

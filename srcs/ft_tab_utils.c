@@ -6,7 +6,7 @@
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 22:46:47 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/14 16:20:38 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/14 22:45:44 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static void	fill_functions_hash(int *hash, const char *str)
 void	t_printf_constructor(t_printf *tab)
 {
 	fill_functions_hash(tab->cnv_hash, "cspdiuxX%");
-	fill_functions_hash(tab->flg_hash, "-0.*# +");
+	fill_functions_hash(tab->flg_hash, "-0.# +");
 	tab->cnv_eval[tab->cnv_hash[(int) 'c']] = &ft_eval_char;
 	tab->cnv_eval[tab->cnv_hash[(int) 's']] = &ft_eval_str;
 	tab->cnv_eval[tab->cnv_hash[(int) 'p']] = &ft_eval_pointer;
@@ -63,7 +63,6 @@ void	t_printf_constructor(t_printf *tab)
 	tab->flg_eval[tab->flg_hash[(int) '-']] = &ft_flag_dash;
 	tab->flg_eval[tab->flg_hash[(int) '0']] = &ft_flag_zero;
 	tab->flg_eval[tab->flg_hash[(int) '.']] = &ft_flag_point;
-	tab->flg_eval[tab->flg_hash[(int) '*']] = &ft_flag_star;
 	tab->flg_eval[tab->flg_hash[(int) '#']] = &ft_flag_hash;
 	tab->flg_eval[tab->flg_hash[(int) ' ']] = &ft_flag_space;
 	tab->flg_eval[tab->flg_hash[(int) '+']] = &ft_flag_plus;

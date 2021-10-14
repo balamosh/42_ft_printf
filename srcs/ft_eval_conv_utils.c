@@ -6,12 +6,11 @@
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 18:09:13 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/14 15:13:55 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/14 22:45:11 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
 
 int	ft_print_prefix(const char *prefix)
 {

@@ -6,32 +6,34 @@
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 18:09:06 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/13 18:09:07 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/14 22:45:42 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
+
+void	ft_set_prefix(t_printf *tab, const char *prefix)
+{
+	int	i;
+
+	i = 0;
+	while (prefix[i] != '\0')
+	{
+		tab->prefix[i] = prefix[i];
+		++i;
+		--tab->wdt;
+	}
+	tab->prefix[i] = '\0';
+}
 
 void	ft_update_prefix(t_printf *tab)
 {
-	if (tab->hash)
-		tab->wdt -= 2;
-	else if (tab->sign)
-	{
-		ft_strcpy(tab->prefix, "-");
-		tab->wdt--;
-	}
+	if (tab->sign)
+		ft_set_prefix(tab, "-");
 	else if (tab->plus)
-	{
-		ft_strcpy(tab->prefix, "+");
-		tab->wdt--;
-	}
+		ft_set_prefix(tab, "+");
 	else if (tab->sp)
-	{
-		ft_strcpy(tab->prefix, " ");
-		tab->wdt--;
-	}
+		ft_set_prefix(tab, " ");
 }
 
 void	ft_update_tab(t_printf *tab, int len)

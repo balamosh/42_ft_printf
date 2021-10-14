@@ -6,12 +6,11 @@
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 22:46:17 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/12 22:46:20 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/14 22:45:15 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
 
 static int	ft_eval_flag(t_printf *tab, const char *format, int pos)
 {
@@ -23,7 +22,7 @@ static int	ft_eval_flag(t_printf *tab, const char *format, int pos)
 	else if (ft_isdigit(format[pos]))
 		pos = ft_eval_width(tab, format, pos);
 	else
-		pos++;
+		++pos;
 	return (pos);
 }
 

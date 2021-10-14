@@ -6,12 +6,11 @@
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 22:46:30 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/14 16:13:20 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/14 22:45:28 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
 
 #ifdef __APPLE__
 

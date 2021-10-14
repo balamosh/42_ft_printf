@@ -6,11 +6,28 @@
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 22:46:37 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/13 05:09:25 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/14 22:49:47 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+void	ft_putnbr_un(unsigned int nb)
+{
+	if (nb >= 10)
+		ft_putnbr_un(nb / 10);
+	ft_putchar_fd(nb % 10 + '0', 1);
+}
+
+void	ft_putnbr_hex(unsigned long int nb, const char *base)
+{
+	unsigned long int	base_len;
+
+	base_len = 16;
+	if (nb >= base_len)
+		ft_putnbr_hex(nb / base_len, base);
+	ft_putchar_fd(base[nb % base_len], 1);
+}
 
 void	ft_print_nbr_left(t_printf *tab)
 {

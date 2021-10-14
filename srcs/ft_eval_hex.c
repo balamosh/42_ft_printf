@@ -6,12 +6,11 @@
 /*   By: sotherys <sotherys@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 22:46:22 by sotherys          #+#    #+#             */
-/*   Updated: 2021/10/12 22:46:23 by sotherys         ###   ########.fr       */
+/*   Updated: 2021/10/14 22:46:45 by sotherys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
 
 void	ft_eval_hex_low(t_printf *tab)
 {
@@ -21,7 +20,7 @@ void	ft_eval_hex_low(t_printf *tab)
 	if (nb == 0)
 		tab->hash = 0;
 	if (tab->hash)
-		ft_strcpy(tab->prefix, "0x");
+		ft_set_prefix(tab, "0x");
 	ft_print_hex(tab, nb, "0123456789abcdef");
 }
 
@@ -33,7 +32,7 @@ void	ft_eval_hex_cap(t_printf *tab)
 	if (nb == 0)
 		tab->hash = 0;
 	if (tab->hash)
-		ft_strcpy(tab->prefix, "0X");
+		ft_set_prefix(tab, "0X");
 	ft_print_hex(tab, nb, "0123456789ABCDEF");
 }
 
