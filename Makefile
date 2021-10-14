@@ -2,11 +2,9 @@ NAME		= libftprintf.a
 
 SRCS_PATH	= srcs/
 OBJS_PATH	= objs/
-LIBFT_PATH	= libft/
+HEAD_PATH	= includes/
 
-LIBFT_LIB	= libft.a
-
-HEADERS		= -I includes/ -I libft/
+HEAD_FILES	= ft_printf.h
 
 SRCS_FILES	= ft_printf.c				\
 			  ft_eval_format.c			\
@@ -33,16 +31,12 @@ SRCS_FILES	= ft_printf.c				\
 OBJS_FILES	= $(SRCS_FILES:.c=.o)
 
 SRCS		= $(addprefix $(SRCS_PATH), $(SRCS_FILES))
-
 OBJS		= $(addprefix $(OBJS_PATH), $(OBJS_FILES))
-
-LIBFT		= $(addprefix $(LIBFT_PATH), $(LIBFT_LIB))
+HEAD		= $(addprefix $(HEAD_PATH), $(HEAD_FILES))
 
 CC			= gcc
 
 CFLAGS		= -Wall -Werror -Wextra
-
-LIBFT_OBJS	= $(LIBFT_PATH)*.o
 
 all: $(NAME)
 
@@ -52,22 +46,18 @@ $(NAME): $(OBJS_PATH) $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
 	ranlib $(NAME)
 
-$(OBJS_PATH)%.o: $(SRCS_PATH)%.c
-	$(CC) $(CFLAGS) -c $< -o $@ $(HEADERS)
+$(OBJS_PATH)%.o: $(SRCS_PATH)%.c $(HEAD)
+	$(CC) $(CFLAGS) -c $< -o $@ -I $(HEAD_PATH)
 
 $(OBJS_PATH):
 	mkdir $(OBJS_PATH)
 
-$(LIBFT):
-	make -C $(LIBFT_PATH)
-
 clean:
-	make -C $(LIBFT_PATH) fclean
 	rm -rf $(OBJS_PATH)
 
 fclean: clean
-		rm -rf $(NAME) $(LIBFT_OBJS) $(LIBFT_LIB)
+		rm -rf $(NAME)
 
 re: fclean all
 
-.PHONY:	all clean fclean re
+.PHONY:	all bonus clean fclean re
