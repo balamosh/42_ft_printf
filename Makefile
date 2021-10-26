@@ -56,7 +56,7 @@ clean:
 	rm -rf $(OBJS_PATH)
 
 fclean: clean
-		rm -rf $(NAME)
+	rm -rf $(NAME)
 
 re: fclean all
 
